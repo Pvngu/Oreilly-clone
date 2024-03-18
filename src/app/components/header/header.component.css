@@ -6,6 +6,7 @@ header {
     border-bottom: 1px solid rgba(0, 0, 0, .1);
     position: fixed;
     height: 85px;
+    z-index: 30;
 }
 
 .content nav {
