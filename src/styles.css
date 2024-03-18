@@ -7,3 +7,105 @@
 body {
     font-family: 'Poppins', sans-serif;
 }
+
+main {
+    padding-top: 87px;
+}
+
+.content {
+    max-width: 1224px;
+    margin: 0 auto;
+    padding-inline: 1.2rem;
+}
+
+h1 {
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-size: 3.375rem;
+    line-height: 3.6rem;
+}
+
+p {
+    font-family: 'Gilroy-Light', sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.5em;
+}
+
+.btn-primary {
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-size: 1.5rem;
+    padding: 8px 20px;
+    border-radius: 2px;
+    background: #0071eb;
+    text-decoration: none;
+    color: #fff;
+
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 12px;
+        height: 20px;
+        margin-left: 4px;
+        background-image: url('https://cdn.oreillystatic.com/images/icons/icon_right_arrow_white.svg');
+        background-size: cover;
+        vertical-align: middle;
+    }
+}
+
+.btn-secondary {
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #0071eb;
+    margin-inline: 30px;
+    border-bottom: solid 2px transparent;
+
+    &:hover {
+        border-color: #0071eb;
+    }
+
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 10px;
+        height: 18px;
+        margin-left: 4px;
+        color: red;
+        background-image: url('https://cdn.oreillystatic.com/images/icons/icon_right_arrow_blue.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        vertical-align: middle;
+    }
+}
+
+@media (max-width: 1150px) {
+    main {
+        padding-top: 77px;
+    }
+
+    h1 {
+        font-family: 'Gilroy-Medium', sans-serif;
+        font-size: 3.2rem;
+        line-height: 3rem;
+    }
+
+    .btn-primary {
+        font-size: 1.3rem;
+    }
+    
+    .btn-secondary {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 622px) {
+    main {
+        padding-top: 77px;
+    }
+}
+
+@media (max-width: 510px) {
+    main {
+        padding-top: 68px;
+    }
+}
+

@@ -5,19 +5,13 @@ header {
     backdrop-filter: saturate(200%) blur(16px);
     border-bottom: 1px solid rgba(0, 0, 0, .1);
     position: fixed;
-    height: 77px;
-}
-
-.content {
-    max-width: 1224px;
-    margin: 0 auto;
-    padding-inline: 1.2rem;
-    padding-block: 25px;
+    height: 85px;
 }
 
 .content nav {
     display: flex;
     justify-content: space-between;
+    padding-block: 25px;
 }
 
 .navLeft {
@@ -26,6 +20,7 @@ header {
     .logo img{
         max-width: 150px;
         margin-right: 50px;
+        margin-top: 3px;
     }
 
     .menuList {
@@ -128,7 +123,6 @@ header {
             width: 10px;
             height: 16px;
             margin-left: 4px;
-            color: red;
             background-image: url('https://cdn.oreillystatic.com/images/icons/icon_right_arrow_white.svg');
             background-size: contain;
             background-repeat: no-repeat;
@@ -143,7 +137,6 @@ header {
 
 /* Hamburger button */
 input[type = "checkbox"] {
-    -webkit-appearance: none;
     display: none;
     visibility: hidden;
   }
@@ -209,6 +202,10 @@ input[type = "checkbox"] {
 }
 
 @media (max-width: 1150px) {
+    header {
+        height: 77px;
+    }
+
     .navLeft .menuList, .searchContainer{
         display: none;
     }
@@ -219,13 +216,14 @@ input[type = "checkbox"] {
 
     .navLeft {
         .menuList {
+            visibility: hidden;
             position: absolute;
             width: 320px;
             padding: 18px 20px;
             top: 77px;
             right: 0;
             list-style-type: none;
-            display: none;
+            display: flex;
             flex-direction: column;
             align-items: start;
             column-gap: 20px;
@@ -233,7 +231,7 @@ input[type = "checkbox"] {
             background-color: #f2f2f2;
 
             &.active {
-                display: flex;
+                visibility: visible;
             }
     
             .menuList-item {
@@ -285,6 +283,7 @@ input[type = "checkbox"] {
 }
 
 @media (max-width: 622px) {
+
     .navRight {
         .signIn, .tryNow {
             display: none;
@@ -294,11 +293,16 @@ input[type = "checkbox"] {
     .navLeft {
         .menuList {
             width: 100%;
+            top: 68px;
         }
     }
 }
 
 @media (max-width: 510px) {
+    header {
+        height: 68px;
+    }
+
     .navLeft{
         .logo img{
             width: 130px;

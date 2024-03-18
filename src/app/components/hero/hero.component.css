@@ -1,0 +1,105 @@
+.hero-content {
+    background-image: linear-gradient(225deg, rgba(142, 34, 167, 11) 3%, rgba(0, 113, 235, 1) 22%, rgba(0, 113, 235, 0) 50%);
+    padding-block: 80px;
+}
+
+.grid-content {
+    display: grid;
+    grid-template-columns: 1fr 1.20fr;
+}
+
+.hero-text {
+    h1 {
+        margin-bottom: 6px;
+    }
+
+    .hero-picture {
+        display: none;
+        visibility: hidden;
+    }
+
+    p {
+        margin-bottom: 33px;
+    }
+}
+
+.hero-picture {
+    figure {
+        width: 100%;
+        padding-bottom: 69.42%;
+        background-image: url('https://cdn.oreillystatic.com/oreilly/images/hero-odot-animal-20221104.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (min-width: 800px ) {
+    .highlight {
+        background: rgb(0, 113, 235) linear-gradient(135deg, rgb(0, 113, 235) 0%, rgb(142, 34, 167) 100%);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+    }
+}
+
+@media (max-width: 1150px) { 
+    
+}
+
+@media (max-width: 800px) {
+    .hero-content {
+        background-image: linear-gradient(195deg, rgba(142, 34, 167, 11) 10%, rgba(0, 113, 235, 1) 40%, rgba(0, 113, 235, 0) 75%);
+    }
+
+    .grid-content {
+        display: block;
+        text-align: center;
+    }
+
+    .hero-text {
+        h1 {
+            color: #fff;
+            line-height: 3.5rem;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-family: 'Gilroy-Normal', sans-serif;
+        }
+
+        .hero-picture {
+            display: unset;
+            figure {
+                visibility: visible;
+              margin-bottom: 30px;
+            }
+        }
+    }
+
+    .hero-picture {
+        figure {
+            visibility: hidden;
+        }
+    }
+}
+
+@media (max-width: 622px) { 
+    .hero-text {
+        h1 {
+            font-size: 2.4rem;
+            line-height: 1.3;
+        }
+    }
+}
+
+@media (max-width: 510px) {
+    .hero-text {
+        h1 {
+            font-size: 2rem;
+        }
+    }
+}
