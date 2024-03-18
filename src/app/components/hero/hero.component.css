@@ -1,6 +1,10 @@
 .hero-content {
     background-image: linear-gradient(225deg, rgba(142, 34, 167, 11) 3%, rgba(0, 113, 235, 1) 22%, rgba(0, 113, 235, 0) 50%);
     padding-block: 80px;
+
+    .btn-secondary {
+        margin-inline: 30px;
+    }
 }
 
 .grid-content {
@@ -26,9 +30,9 @@
 .hero-picture {
     figure {
         width: 100%;
-        padding-bottom: 69.42%;
+        padding-bottom: 63%;
         background-image: url('https://cdn.oreillystatic.com/oreilly/images/hero-odot-animal-20221104.png');
-        background-size: cover;
+        background-size: contain;
         background-repeat: no-repeat;
     }
 }

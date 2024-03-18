@@ -56,7 +56,6 @@ p {
     font-size: 1.6rem;
     text-decoration: none;
     color: #0071eb;
-    margin-inline: 30px;
     border-bottom: solid 2px transparent;
 
     &:hover {
