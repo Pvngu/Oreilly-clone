@@ -30,6 +30,7 @@
 figure video {
     display: block;
     margin: 0 auto;
+    width: 100%;
 }
 
 .btn-secondary {
