@@ -1,7 +1,10 @@
+#testimonials {
+    padding-block: 140px;
+    background: linear-gradient(90deg, rgba(244, 244, 244, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(244, 244, 244, 1) 100%);
+}
 .flex-container {
     display: flex;
     justify-content: space-between;
-    margin-block: 140px;
 
     .flex-item {
         width: 46%;
@@ -40,9 +43,11 @@
 }
 
 @media (max-width: 800px) {
+    #testimonials {
+        padding-block: 80px;
+    }
     .flex-container {
         flex-direction: column-reverse;
-        margin-block: 80px;
 
         .testimonial-videos {
             margin: 0 auto;

@@ -9,7 +9,7 @@
 
 .grid-content {
     display: grid;
-    grid-template-columns: 1fr 1.20fr;
+    grid-template-columns: 1fr 1.2fr;
 }
 
 .hero-text {
