@@ -32,13 +32,21 @@ h2 {
     font-family: 'Gilroy-Normal', sans-serif;
     font-size: 1.45rem;
     line-height: 2rem;
-    text-wrap: balance;
+}
+
+h2.big {
+    font-size: 2rem;
+    line-height: 2.5rem;
 }
 
 p {
     font-family: 'Gilroy-Light', sans-serif;
     font-size: 1.25rem;
     line-height: 1.5em;
+}
+
+p.big {
+    font-size: 1.6rem;
 }
 
 .btn-primary {
@@ -68,6 +76,7 @@ p {
     text-decoration: none;
     color: #0071eb;
     border-bottom: solid 2px transparent;
+    width: fit-content;
 
     &:hover {
         border-color: #0071eb;
@@ -93,9 +102,13 @@ p {
     }
 
     h1 {
-        font-family: 'Gilroy-Medium', sans-serif;
         font-size: 3.2rem;
         line-height: 3rem;
+    }
+
+    h2.big {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
     }
 
     .btn-primary {
@@ -118,6 +131,10 @@ p {
     p {
         font-family: 'Gilroy-Normal', sans-serif;
     }
+
+    p.big {
+        font-size: 1.4rem;
+    }
 }
 
 @media (max-width: 622px) {
@@ -132,6 +149,10 @@ p {
 
     p {
         font-size: 1rem;
+    }
+
+    p.big {
+        font-size: 1.2rem;
     }
 }
 
