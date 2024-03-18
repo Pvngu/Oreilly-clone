@@ -18,6 +18,10 @@ main {
     padding-inline: 1.2rem;
 }
 
+.sectionContent {
+    padding-block: 80px;
+}
+
 h1, h2 {
     text-wrap: balance;
 }
@@ -96,6 +100,22 @@ p.big {
     }
 }
 
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .flex-item {
+        width: 46%;
+    }
+
+    .flex-text {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+}
+
 @media (max-width: 1150px) {
     main {
         padding-top: 77px;
@@ -123,6 +143,10 @@ p.big {
 }
 
 @media (max-width: 800px) {
+    .sectionContent {
+        padding-block: 44px;
+    }
+
     h2 {
         font-family: 'Gilroy-Normal', sans-serif;
         font-size: 1.1rem;
@@ -136,6 +160,19 @@ p.big {
 
     p.big {
         font-size: 1.4rem;
+    }
+
+    .flex-container {
+        flex-direction: column-reverse;
+
+        &.reverse {
+            flex-direction: column;
+        }
+        
+        .flex-text {
+            width: 100%;
+            text-align: center;
+        }
     }
 }
 
