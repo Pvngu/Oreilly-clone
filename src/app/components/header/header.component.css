@@ -1,0 +1,307 @@
+header {
+    width: 100%;
+    border-bottom: solid 1px black;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: saturate(200%) blur(16px);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    position: fixed;
+    height: 77px;
+}
+
+.content {
+    max-width: 1224px;
+    margin: 0 auto;
+    padding-inline: 1.2rem;
+    padding-block: 25px;
+}
+
+.content nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navLeft {
+    display: flex;
+
+    .logo img{
+        max-width: 150px;
+        margin-right: 50px;
+    }
+
+    .menuList {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+
+        .menuList-item {
+            a {
+                text-decoration: none;
+                color: #222;
+                font-weight: 500;
+                text-transform: uppercase;
+            }
+
+            & > a:hover + .subitems {
+                display: block;
+            }
+
+            .subitems {
+                display: none;
+                position: absolute;
+                padding: 15px 20px;
+                background-color: #f2f2f2;
+                width: 230px;
+                transform: translateY(1px);
+
+                &:hover {
+                    display: block;
+                }
+                li {
+                    font-size: 0.8rem;
+                    font-weight: 300;
+                    list-style-type: none;
+                    margin-bottom: 18px;
+
+                    a {
+                        text-transform: none;
+                    }
+
+                    &:hover a {
+                        border-bottom: solid 1px black;
+                    }
+                }
+            }
+        }
+
+        .menuList-item:hover > a {
+            border-bottom: solid 2px black;
+        }
+    }
+
+    .searchContainer {
+        margin-left: 40px;
+
+        button {
+            background-image: url('https://cdn.oreillystatic.com/oreilly/images/search-icon-gray.svg');
+            background-size: contain;
+            background-color: transparent;
+            width: 20px;
+            height: 20px;
+            text-indent: 9999px;
+            cursor: pointer;
+            border: none;
+        }
+    }
+}
+
+.navRight {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    font-weight: 500;
+    margin-right: 14px;
+    
+    .signIn {
+        text-decoration: none;
+        color: #0071eb;
+        text-transform: uppercase;
+        line-height: 20px;
+        border-bottom: solid 2px transparent;
+
+        &:hover {
+            border-color: #0071eb;
+        }
+    }
+
+    .tryNow {
+        text-decoration: none;
+        background-color: #0071eb;
+        color: #fff;
+        padding: 8px 14px;
+        border-radius: 2px;
+        font-size: 0.9rem;
+
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 16px;
+            margin-left: 4px;
+            color: red;
+            background-image: url('https://cdn.oreillystatic.com/images/icons/icon_right_arrow_white.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            vertical-align: middle;
+        }
+    }
+
+    .bar {
+        display: none;
+    }
+}
+
+/* Hamburger button */
+input[type = "checkbox"] {
+    -webkit-appearance: none;
+    display: none;
+    visibility: hidden;
+  }
+  
+  .bar {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    width: 30px;
+    height: 26px;
+  }
+  
+  .bar span {
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background: #222;
+    display: inline-block;
+    transition: 0.3s ease;
+    left: 0;
+  }
+  
+  .bar span.top {
+    top: 0;
+  }
+  
+  .bar span.middle {
+    top: 11px;
+  }
+  
+  .bar span.bottom {
+    bottom: 0;
+  }
+  
+  input[type]:checked ~ span.top {
+    transform: rotate(45deg);
+    transform-origin: top left;
+    width: 30px;
+    left: 3px;
+  }
+  
+  input[type]:checked ~ span.bottom {
+    transform: rotate(-45deg);
+    transform-origin: top left;
+    width: 30px;
+    bottom: 0px;
+  }
+  
+  input[type]:checked ~ span.middle {
+    transform: translateX(-20px);
+    opacity: 0;
+}
+
+/* Mobile Sidebar */
+
+.mobile-sidebar {
+    top: 77px;
+    display: absolute;
+    position: fixed;
+    .menuList {
+        list-style-type: none;
+    }
+}
+
+@media (max-width: 1150px) {
+    .navLeft .menuList, .searchContainer{
+        display: none;
+    }
+
+    .navRight .bar {
+        display: inline-block;
+    }
+
+    .navLeft {
+        .menuList {
+            position: absolute;
+            width: 320px;
+            padding: 18px 20px;
+            top: 77px;
+            right: 0;
+            list-style-type: none;
+            display: none;
+            flex-direction: column;
+            align-items: start;
+            column-gap: 20px;
+            font-size: 0.75rem;
+            background-color: #f2f2f2;
+
+            &.active {
+                display: flex;
+            }
+    
+            .menuList-item {
+                margin-bottom: 14px;
+                a {
+                    text-decoration: none;
+                    color: #222;
+                    font-weight: 500;
+                    text-transform: none;
+                    font-weight: 400;
+                }
+    
+                .subitems {
+                    display: block;
+                    position: inherit;
+                    transform: translateY(1px);
+                    padding: 0;
+                    
+                    li:first-child {
+                        display: none;
+                    }
+
+                    li {
+                        font-size: 0.8rem;
+                        font-weight: 300;
+                        list-style-type: none;
+                        margin: 0;
+                        padding-block: 10px;
+                        padding-left: 20px;
+                        border-left: solid 2px #d8d8d8;
+    
+                        a {
+                            text-transform: none;
+                        }
+    
+                        &:hover a {
+                            border: none;
+                        }
+                    }
+                }
+            }
+    
+            .menuList-item:hover > a {
+                border-bottom: solid 1px black;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 622px) {
+    .navRight {
+        .signIn, .tryNow {
+            display: none;
+        }
+    }
+
+    .navLeft {
+        .menuList {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 510px) {
+    .navLeft{
+        .logo img{
+            width: 130px;
+        }
+    }
+}

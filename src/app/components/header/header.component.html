@@ -1,0 +1,77 @@
+<header>
+    <div class="content">
+        <nav>
+            <div class="navLeft">
+                <a class="logo" href="/">
+                    <img src="https://cdn.oreillystatic.com/images/sitewide-headers/oreilly_logo_mark_red.svg" alt="O'REILLY logo">
+                </a>
+                <ul class="menuList" [ngClass]="{active: active}">
+                    <li class="menuList-item">
+                        <a href="#">Teams</a>
+                        <ul class="subitems">
+                            <li>
+                                <a href="#">For business</a>
+                            </li>
+                            <li>
+                                <a href="#">For government</a>
+                            </li>
+                            <li>
+                                <a href="#">For higher ed</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menuList-item">
+                        <a href="#">Individuals</a>
+                    </li>
+                    <li class="menuList-item">
+                        <a href="#">Features</a>
+                        <ul class="subitems">
+                            <li>
+                                <a href="#">Courses</a>
+                            </li>
+                            <li>
+                                <a href="#">Certifications</a>
+                            </li>
+                            <li>
+                                <a href="#">Interactive learning</a>
+                            </li>
+                            <li>
+                                <a href="#">Live events</a>
+                            </li>
+                            <li>
+                                <a href="#">Answer</a>
+                            </li>
+                            <li>
+                                <a href="">Insight reporting</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menuList-item">
+                        <a href="#">Blog</a>
+                    </li>
+                    <li class="menuList-item">
+                        <a href="#">Content Sponsorship</a>
+                    </li>
+                </ul>
+                <div class="searchContainer">
+                    <button>Search</button>
+                </div>
+            </div>
+            <div class="navRight">
+                <a class="signIn" href="#">
+                    Sign In
+                </a>
+                <a class="tryNow" href="#">
+                    Try now
+                </a>
+                <label class="bar" for="check">
+                    <input type="checkbox" id="check" (click)="showNavbar()">
+                    
+                    <span class="top"></span>
+                    <span class="middle"></span>
+                    <span class="bottom"></span>
+                </label>
+            </div>
+        </nav>
+    </div>
+</header>
